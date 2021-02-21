@@ -6,7 +6,10 @@ namespace StrategyLogger
     {
         public void LogError(string message)
         {
+            // балуемся с цветом текста в консоли, так как
+            // логгирование должно быть красивым
             Console.ForegroundColor = ConsoleColor.Red;
+            // выводим сообщение с типом события и текущей датой
             Console.Write($"{DateTime.Now} | ERROR: ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(message);
